@@ -1,5 +1,6 @@
 from Win import status
 from Bot import minimax
+import random
 class TicTacToe:
     def __init__(self):
         self.board = ['-' for _ in range(9)]
@@ -21,8 +22,16 @@ class TicTacToe:
             if status(self.board,'X','O') == 'Player':
                 print("You win!")
                 break
-            elif status(self.board,'X','O') == 'Bot':
-                print("You lose!")
-                break
             aiChoice = minimax(self.board,'X','O')
-            print(aiChoice)
+            c = None
+            for x in range(len(aiChoice)):
+                c = aiChoice[x]
+                if c:
+                    if self.board[aiChoice[x]] == '-':
+                        break
+            print(c)
+            if c != None:
+                self.board[c] = 'O'
+                if status(self.board,'X','O') == 'Bot':
+                    print("You lose!")
+                    break
