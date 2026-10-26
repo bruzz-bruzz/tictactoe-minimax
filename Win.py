@@ -1,6 +1,0 @@
-def status(board,player,bot):
-    if (board[0] == player and board[1] == player and board[2] == player) or (board[3] == player and board[4] == player and board[5] == player) or (board[6] == player and board[7] == player and board[8] == player) or (board[0] == player and board[3] == player and board[6] == player) or (board[1] == player and board[4] == player and board[7] == player) or (board[2] == player and board[5] == player and board[8] == player) or (board[0] == player and board[4] == player and board[8] == player) or (board[2] == player and board[4] == player and board[6] == player):
-        return 'Player'
-    if (board[0] == bot and board[1] == bot and board[2] == bot) or (board[3] == bot and board[4] == bot and board[5] == bot) or (board[6] == bot and board[7] == bot and board[8] == bot) or (board[0] == bot and board[3] == bot and board[6] == bot) or (board[1] == bot and board[4] == bot and board[7] == bot) or (board[2] == bot and board[5] == bot and board[8] == bot) or (board[0] == bot and board[4] == bot and board[8] == bot) or (board[2] == bot and board[4] == bot and board[6] == bot):
-        return 'Bot'
-    return 'None'
